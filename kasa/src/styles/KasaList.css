@@ -1,0 +1,40 @@
+.ks-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.ks-appartment-list {
+    list-style-type: none;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    background: #F7F7F7;
+    border-radius: 25px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.ks-appartment-item {
+    width: 20%;
+    height: 250px;
+    margin: 50px;
+    padding: 12px;
+    display: flex;
+    text-align: flex-start;
+    align-items: flex-end;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    line-height: 25.67px;
+    font-size: 18px;
+    color: white;
+    background: linear-gradient(180deg, #FF6060 0%, #9a3838 80%);
+    border-radius: 10px;
+}
+
+.appartment_cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

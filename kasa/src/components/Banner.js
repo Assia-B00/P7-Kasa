@@ -1,15 +1,20 @@
 import '../styles/Banner.css'
-import K from '../assets/K.png'
-import Maison from '../assets/Maison.png'
-import S from '../assets/S.png'
-import A from '../assets/A.png'
+import logo from '../assets/logo.png'
+import { Link } from 'react-router-dom'
+
 function Banner() {
     return <div className='ks-banner'>
-                    <img src={K} alt='Kasa' className='ks-logo' />
-                    <img src={Maison} alt='Kasa' className='ks-logo' />
-                    <img src={S} alt='Kasa' className='ks-logo' />
-                    <img src={A} alt='Kasa' className='ks-logo' />
-        <h1>Chez vous, partout et ailleurs</h1>
+        <img src={logo} alt='Kasa-logo' className='ks-logo' />
+        <nav class='nav'>
+            <ul class='nav-list'>
+                <li class='nav-items'>
+                    <Link to="/">Accueil</Link>
+                </li>
+                <li>
+                    <Link to="/A_propos">À propos</Link>
+                </li>
+            </ul>
+        </nav>
     </div>
 }
 

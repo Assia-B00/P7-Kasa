@@ -2,5 +2,23 @@
     color: black;
     text-align: left;
     padding: 32px;
-    border-bottom: solid 3px black;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-items {
+    text-decoration: none;
 }
