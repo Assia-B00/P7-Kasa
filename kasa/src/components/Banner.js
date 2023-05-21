@@ -10,7 +10,7 @@ function Banner() {
                 <li class='nav-items'>
                     <Link to="/">Accueil</Link>
                 </li>
-                <li>
+                <li class='nav-items'>
                     <Link to="/A_propos">À propos</Link>
                 </li>
             </ul>

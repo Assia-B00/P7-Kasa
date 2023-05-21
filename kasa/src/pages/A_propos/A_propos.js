@@ -1,6 +1,8 @@
 import Collapse from '../../components/Collapse';
 import ImgApropos from '../../components/Img_apropos';
 import Footer from '../../components/Footer'
+import '../../styles/First_image.css'
+import "../../styles/A_propos.css"
 
 export default function A_propos() {
 
@@ -29,8 +31,8 @@ export default function A_propos() {
 
     return (
         <div>
-            <ImgApropos />
-            <main className='about_main'>
+            <ImgApropos/>
+            <main className='about'>
                 {aproposDatas.map(data => {
                     return (
                         <div key={data.id} className="about_main_collapse">

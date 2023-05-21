@@ -1,31 +1,40 @@
-import '../styles/Collapse.css'
-import arrow from '../assets/arrow.png';
-import { useState } from 'react';
+import React, { useState } from 'react'
+import chevronUp from "../assets/ChevronUp.png"
+import chevronDown from "../assets/ChevronDown.png"
+import "../styles/Collapse.css"
 
-export default function Collapse({title, content}) {
 
-    const [toggle, setToggle] = useState(false);
+
+function Collapse({title, content}) {
+    // défini le collapse par défaut comme fermé
+    const [contentVisible, setContentVisible] = useState(false)
+
+    // à chaque clic sur le collapse, ca inverse la valeur pour le ouvert/fermé
+    const affContent = () => { 
+        setContentVisible(!contentVisible) // inverse la valeur actuelle
+    }
+
+    // défini les classes selon si c'est visible ou caché, idem pour le chevron
+    const collapseContent = (contentVisible ? "visible" : "hidden") + " collapse"
+    const collapseChevron = (contentVisible ? chevronUp : chevronDown)
 
     return (
-        <>
-            <div className="collapse" >
-                <h3 className='collapse_title' onClick={() => setToggle(!toggle)} >
-                    {title}
-                    <img 
-                        className={toggle ? 'arrow arrow_up' : 'arrow arrow_down'} 
-                        src={arrow} 
-                        alt="show content" 
-                    />
-                </h3>
-                <div className={toggle ? 'collapse_content' : 'collapse_content_hidden'}>
-                    {Array.isArray(content) ? content.map((item, index) => {
-                        return (
-                            <p key={index}>{item}</p>
-                        )
-                    }) : content
-                    }
-                </div> 
+        <div className='collapse'>
+
+            {/* affiche le titre et le chevron */}
+            <div className='collapse__header' onClick={affContent}>
+                <span>{title}</span>
+                <div className="chevronValue">
+                    <img src={collapseChevron} alt=""/>
+                </div>
             </div>
-        </>
+
+            {/* affiche le contenu */}
+            <div className={collapseContent}>
+                <ul>{content}</ul>
+            </div>
+        </div>
     )
 }
+
+export default Collapse
