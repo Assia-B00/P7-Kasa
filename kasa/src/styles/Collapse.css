@@ -43,6 +43,7 @@
 .chevronValue img {
     width: 25px;
     height: 15px;
+    color: #f7f7f7;
 }
 
 .visible.collapse {
@@ -59,6 +60,10 @@
 
 .equipement-content {
     margin: 0;
+}
+
+.content {
+    color: black;
 }
 
 @media (max-width: 768px) {
