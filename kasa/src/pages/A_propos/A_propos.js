@@ -1,9 +1,10 @@
 import Collapse from '../../components/Collapse';
+import ImgApropos from '../../components/Img_apropos';
 import Footer from '../../components/Footer'
 
 export default function A_propos() {
 
-    const aboutDatas = [
+    const aproposDatas = [
         {
             "id": "1",
             "title": "Fiabilité",
@@ -28,9 +29,9 @@ export default function A_propos() {
 
     return (
         <div>
-
+            <ImgApropos />
             <main className='about_main'>
-                {aboutDatas.map(data => {
+                {aproposDatas.map(data => {
                     return (
                         <div key={data.id} className="about_main_collapse">
                             <Collapse style={{ margin: '30px 0' }} title={data.title} content={data.content} />

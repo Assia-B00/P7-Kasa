@@ -1,5 +1,7 @@
 .collapse_title {
-    background-color: yellowgreen;
+
+    background: linear-gradient(180deg, #FF6060 0%, #9a3838 80%);
+    color: white;
 }
 
 .arrow_up {

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import A_propos from './pages/A_propos/A_propos'
 import Appartment from './pages/Appartment/Appartment'
+import Error_page from './pages/Error_page/Error_page'
 import Banner from './components/Banner'
 
 
@@ -16,6 +17,7 @@ ReactDOM.render(
         <Route path="/" element={<Home />} />
         <Route path="/a_propos" element={<A_propos />} />
         <Route path="/Appartment/:id" element={<Appartment />} />
+        <Route path="/Error_page" element={<Error_page />} />
       </Routes>
     </Router>
   </React.StrictMode>,
