@@ -1,42 +1,46 @@
-import ArrowRight from '../assets/chevronDroit.png'
-import ArrowLeft from '../assets/chevronGauche.png'
-import { useState } from 'react'
+import React, { useState } from 'react'
+import chevronGauche from "../assets/chevronGauche.png"
+import chevronDroit from "../assets/chevronDroit.png"
+import "../styles/Carousel.css"
 
-export default function Slider({imageSlider}) {
 
-    const [currentIndex, setCurrentIndex] = useState(0)
+function Carousel({pictures}) { //reçois un tableau avec les URL des images
 
-    const nextSlide = () => {
-        setCurrentIndex(currentIndex + 1)
-        if(currentIndex === imageSlider.length - 1)
-            setCurrentIndex(0)
-    }
+    const [index, setIndex] = useState(0)  // variable de compteur, défini au départ sur 0
+    const totalPictures = pictures.length-1 // nombre max d'images
 
-    const prevSlide = () => {
-        setCurrentIndex(currentIndex - 1)
-        if(currentIndex === 0)
-            setCurrentIndex(imageSlider.length - 1)
-    }
+    if (index < 0) setIndex(totalPictures)  // si inférieur à zéro, défini le nombre d'images max
+    if (index > totalPictures) setIndex(0)  // si supérieur au max d'images, alors met à zéro
+    
+    return(
+        <div className='carousel'>
 
-    return (
-        <section style={{backgroundImage : `url(${imageSlider[currentIndex]})`}} className='carousel'>
-            {imageSlider.length > 1 && 
-                <>
-                    <img 
-                        className='carousel_arrow carousel_arrow_right' 
-                        src={ArrowRight} 
-                        alt="show next slider" 
-                        onClick={nextSlide}
-                    />
-                    <img 
-                        className='carousel_arrow carousel_arrow_left' 
-                        src={ArrowLeft} 
-                        alt="show previous slider" 
-                        onClick={prevSlide}
-                    />
-                    <p className='slideCount'>{currentIndex + 1} / {imageSlider.length}</p>
-                </>
-            } 
-        </section>
+            {/* affiche la première image */}
+            <div className='div-image'>  
+                <img src={pictures[index]} className="classImage" key={"car-"+index} alt={"photo "+index} />
+            </div>
+
+            {/* si plus d'une image, alors ce code sera exécuté */}
+            {totalPictures > 0 && ( 
+                <div> {/* les boutons pour les chevrons droit et gauche, servent pour naviguer au sein du Carousel */}
+                    <button onClick={() => setIndex(index - 1)}>{index}
+                        <img src={chevronGauche} className='classChevronGauche' alt={'flèche gauche pour changer de photo '+index} />
+                    </button>
+                    <button onClick={() => setIndex(index + 1)}>{index}
+                        <img src={chevronDroit} className='classChevronDroit' alt={'flèche droite pour changer de photo '+index} />
+                    </button>
+                </div>
+            )}
+            {totalPictures > 0 && (
+                // compteur d'images qui ne s'affiche qu'en version Desktop et lorsqu'il y a plusieurs images
+                <div className='div-compteur'> 
+                    <p className='compteurImages'>
+                        {index+1}/{totalPictures+1}
+                    </p>
+                </div>
+            )}
+        </div>
     )
 }
+
+export default Carousel

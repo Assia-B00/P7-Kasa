@@ -1,17 +1,17 @@
 import React from 'react'
-import { appartmentList } from '../datas/appartmentList'
+import apartments from "../datas/data.json"
 import { Link } from 'react-router-dom'
 
-function Card(appartment) {
+function Card(apartments) {
     return (
-    <Link to={`/Appartment/${appartmentList.id}`} className="ks-appartment-item">
+        <Link to={`/Appartment/${apartments.id}`} className="ks-appartment-item">
             <div className='ks-container'>
-                <img className='appartment_cover' src={appartment.cover} alt=""></img>
-                <div>{appartment.title}</div>
+                <img className='appartment_cover' src={apartments.cover} alt=""></img>
+                <div>{apartments.title}</div>
             </div>
         </Link>
-       
-            )
+
+    )
 }
 
 export default Card

@@ -1,19 +1,20 @@
 import React from 'react'
-import { appartmentList } from '../datas/appartmentList'
+import apartments from "../datas/data.json"
 import '../styles/KasaList.css'
 import Card from './Card'
 
 function KasaList() {
+
     return (
-       
+
         <div className='ks-container'>
-            {appartmentList.map((appartment) => {
+            {apartments.map((apartment) => {
                 return (
-                    <Card key={appartment.id} id={appartment.id} title={appartment.title} cover={appartment.cover} />
+                    <Card key={apartment.id} id={apartment.id} title={apartment.title} cover={apartment.cover} />
                 )
             })}
+
         </div>
-        
     )
 }
 

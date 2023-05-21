@@ -1,28 +1,38 @@
-import Card from '../../components/Card'
 import Footer from '../../components/Footer'
+import Carousel from '../../components/Carousel'
+import apartments from "../../datas/data.json"
+import { useParams } from 'react-router-dom'
 import Collapse from '../../components/Collapse'
-import { appartmentList } from '../../datas/appartmentList'
 
 function Appartment() {
 
+  const params = useParams()
+
+  const apartmentDetail = apartments.filter(function (apartment) {
+
+    return apartment.id === params.id;
+  })
+  console.log(apartmentDetail)
   return (
     <div>
-      <Card />
       <main className='about_main'>
-        {appartmentList.map(appartment => {
-          return (
-            <div key={`/Appartment/${appartmentList.id}`} className="appartment_main_collapse">
-              <Collapse key={appartment.id} id={appartment.id} title={'Description'} content={appartment.description} />
-              <Collapse key={appartment.id} id={appartment.id} title={'Equipements'} content={appartment.equipments} />
-            </div>
-          )
-        }
+        {apartmentDetail.map(
+          ({ id, title, pictures, description, host, rating, location, equipments, tags }) => {
+            return (
+              <div key={`/Appartment/${id}`} className="appartment_main_collapse">
+                <Carousel pictures={pictures} />
+                <div>{title}</div>
+                <div>{location}</div>
+                <Collapse key={id} id={id} title={'Description'} content={description} />
+                <Collapse key={id} id={id} title={'Equipements'} content={equipments} />
+              </div>
+            )
+          }
         )}
       </main>
       <Footer />
     </div>
   )
-
 }
 
 export default Appartment
