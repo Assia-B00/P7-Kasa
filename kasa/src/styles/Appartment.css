@@ -101,3 +101,7 @@
   font-family: Monserrat, sans-serif;
   font-size: 18px;
 }
+
+.collapse_appart .collapse:first-child {
+  margin-right: 12px;
+}

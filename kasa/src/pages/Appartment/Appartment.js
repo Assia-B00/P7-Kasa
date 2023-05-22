@@ -22,6 +22,7 @@ function Appartment() {
       <main className='about_main'>
         {apartmentDetail.map(
           ({ id, title, pictures, description, host, rating, location, equipments, tags }) => {
+
             return (
               <div key={`/Appartment/${id}`} className="appartment_main_collapse">
                 <Carousel pictures={pictures} />
@@ -53,7 +54,10 @@ function Appartment() {
                   </div>
                   <div className='collapse_appart'>
                     <Collapse key={id} id={id} title='Description' content={description} />
-                    <Collapse key={id} id={id} title='Equipements' content={equipments} />
+                    <Collapse key={id} id={id} title='Equipements' content={equipments.map((eq, index) => (
+                      <li key={index}>{eq}</li>
+                    )
+                    )} />
                   </div>
                 </div>
               </div>

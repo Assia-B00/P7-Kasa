@@ -6,8 +6,7 @@ import A_propos from './pages/A_propos/A_propos'
 import Appartment from './pages/Appartment/Appartment'
 import Error_page from './pages/Error_page/Error_page'
 import Banner from './components/Banner'
-
-
+import "@fontsource/montserrat"; 
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,7 +14,7 @@ ReactDOM.render(
       <Banner />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/a_propos" element={<A_propos />} />
+        <Route path="/A_propos" element={<A_propos />} />
         <Route path="/Appartment/:id" element={<Appartment />} />
         <Route path="/Error_page" element={<Error_page />} />
       </Routes>

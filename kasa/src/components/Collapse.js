@@ -31,6 +31,7 @@ function Collapse({title, content}) {
 
             {/* affiche le contenu */}
             <div className={collapseContent}>
+                
                 <ul className='content'>{content}</ul>
             </div>
         </div>

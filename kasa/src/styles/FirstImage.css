@@ -13,7 +13,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
 .ks-first_image-h1 {
@@ -36,6 +36,7 @@
     box-shadow: 3px 4px 6px 5px #0000002e;
     margin: auto;
     margin-bottom: 30px;
+    background-color: black;
 }
 
 .ks-img_apropos {
@@ -43,4 +44,5 @@
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    opacity: 0.7;
 }
