@@ -5,6 +5,7 @@
     box-shadow: 3px 4px 6px 5px #0000002e;
     margin: auto;
     margin-bottom: 60px;
+    background-color: black;
 }
 
 .ks-first_image {
@@ -12,7 +13,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    filter: opacity(50%);
+    opacity: 0.6;
 }
 
 .ks-first_image-h1 {
@@ -34,7 +35,7 @@
     border-radius: 10px;
     box-shadow: 3px 4px 6px 5px #0000002e;
     margin: auto;
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
 }
 
 .ks-img_apropos {
@@ -43,5 +44,3 @@
     object-fit: cover;
     border-radius: 10px;
 }
-
-
