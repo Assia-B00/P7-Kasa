@@ -1,4 +1,4 @@
-import FirstImage from '../../components/First_image'
+import FirstImage from '../../components/FirstImage'
 import KasaList from '../../components/KasaList'
 import Footer from '../../components/Footer'
 

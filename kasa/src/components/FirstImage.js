@@ -1,4 +1,4 @@
-import '../styles/First_image.css'
+import '../styles/FirstImage.css'
 import first_image from '../assets/first_image.png'
 
 function FirstImage() {

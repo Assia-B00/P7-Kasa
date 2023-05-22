@@ -1,7 +1,7 @@
 import Collapse from '../../components/Collapse';
-import ImgApropos from '../../components/Img_apropos';
+import ImgApropos from '../../components/ImgApropos';
 import Footer from '../../components/Footer'
-import '../../styles/First_image.css'
+import '../../styles/FirstImage.css'
 import "../../styles/A_propos.css"
 
 export default function A_propos() {

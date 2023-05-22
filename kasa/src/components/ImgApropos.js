@@ -1,4 +1,4 @@
-import '../styles/First_image.css'
+import '../styles/FirstImage.css'
 import img_apropos from '../assets/img_a_propos.png'
 
 function ImgApropos() {
