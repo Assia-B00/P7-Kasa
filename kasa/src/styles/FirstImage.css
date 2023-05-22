@@ -19,8 +19,7 @@
 .ks-first_image-h1 {
     color: white;
     position: relative;
-    left: 25%;
-    right: 0%;
+    text-align: center;
     top: -80%;
     bottom: 69.04%;
     font-family: Montserrat, sans-serif;
