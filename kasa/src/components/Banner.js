@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom'
 function Banner() {
     return <div className='ks-banner'>
         <img src={logo} alt='Kasa-logo' className='ks-logo' />
-        <nav class='nav'>
-            <ul class='nav-list'>
-                <li class='nav-items'>
-                    <Link to="/">Accueil</Link>
+        <nav className='nav'>
+            <ul className='nav-list'>
+                <li>
+                    <Link className='nav-items' to="/">Accueil</Link>
                 </li>
-                <li class='nav-items'>
-                    <Link to="/A_propos">À propos</Link>
+                <li>
+                    <Link className='nav-items' to="/A_propos">À propos</Link>
                 </li>
             </ul>
         </nav>

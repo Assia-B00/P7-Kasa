@@ -1,15 +1,103 @@
 .stars {
-    display: flex;
-    font-size: 30px;
-    width: 130px;
-    gap: 10px;
-    }
-  
-  .span1 {
-    color:red;
-    text-shadow: 0px 0px 5px rgb(180, 166, 166);
-  }
-  
-  .span2 {
-    color: #E3E3E3;
-  }
+  display: flex;
+  font-size: 30px;
+  width: 130px;
+  gap: 10px;
+}
+
+.span1 {
+  color: red;
+  text-shadow: 0px 0px 5px rgb(180, 166, 166);
+}
+
+.span2 {
+  color: #E3E3E3;
+}
+
+.info_collapse {
+  margin: 30px 100px 30px 100px;
+}
+
+.info_apart {
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 142.6%;
+  color: #FF6060;
+}
+
+.location {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 142.6%;
+  color: #FF6060;
+}
+
+.tags {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 142.6%;
+  color: white;
+  background-color: #FF6060;
+}
+
+.host_name {
+  margin-right: 10px;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 142.6%;
+  color: #FF6060;
+}
+
+.host_img {
+  border-radius: 100%;
+  width: 70px;
+}
+
+.host_picture {
+  display: flex;
+  align-items: center;
+}
+
+.div-tags {
+  display: flex;
+  white-space: nowrap;
+  flex-wrap: wrap;
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  padding-inline: 20px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin: 10px 20px 0 0;
+  height: 25px;
+  font-family: Monserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.96px;
+  background-color: #FF6060;
+  color: white;
+  border-radius: 12px;
+}
+
+.collapse_appart {
+  display: flex;
+  font-family: Monserrat, sans-serif;
+  font-size: 18px;
+}

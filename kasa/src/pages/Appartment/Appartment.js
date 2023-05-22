@@ -25,21 +25,37 @@ function Appartment() {
             return (
               <div key={`/Appartment/${id}`} className="appartment_main_collapse">
                 <Carousel pictures={pictures} />
-                <div>{title}</div>
-                <div>{location}</div>
-                <div>{tags}</div>
-                <div>{host.name}</div>
-                <img src={host.picture} />
-                <div className='stars'>
-                  {
-                    arrayStars.map(element => {
-                      const nbreEtoiles = parseInt(rating)
-                      return (<span key={"star-" + element} className={element <= nbreEtoiles ? 'span1' : 'span2'}>★</span>)
-                    })
-                  }
+                <div className='info_collapse'>
+                  <div className='info_apart'>
+                    <div className='title_location_tags'>
+                      <div className='title'>{title}</div>
+                      <div className='location'>{location}</div>
+                      <div className='div-tags'>
+                        {tags.map((element, index) => {
+                          return (<p className='tags' key={"tags-" + index}>{element}</p>)
+                        })}
+                      </div>
+                    </div>
+                    <div className='host-picture-stars'>
+                      <div className='host_picture'>
+                        <div className='host_name'>{host.name}</div>
+                        <img className='host_img' src={host.picture} />
+                      </div>
+                      <div className='stars'>
+                        {
+                          arrayStars.map(element => {
+                            const nbreEtoiles = parseInt(rating)
+                            return (<span key={"star-" + element} className={element <= nbreEtoiles ? 'span1' : 'span2'}>★</span>)
+                          })
+                        }
+                      </div>
+                    </div>
+                  </div>
+                  <div className='collapse_appart'>
+                    <Collapse key={id} id={id} title='Description' content={description} />
+                    <Collapse key={id} id={id} title='Equipements' content={equipments} />
+                  </div>
                 </div>
-                <Collapse key={id} id={id} title='Description' content={description} />
-                <Collapse key={id} id={id} title='Equipements' content={equipments} />
               </div>
             )
           }
@@ -51,3 +67,5 @@ function Appartment() {
 }
 
 export default Appartment
+
+

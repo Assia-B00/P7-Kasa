@@ -1,8 +1,11 @@
 .ks-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    
+    justify-content: space-around;
+    margin: auto;
+    width: 1240px;
+    background-color:#F6F6F6;
+    border-radius: 10px;
 }
 
 .ks-appartment-list {
@@ -12,32 +15,37 @@
     flex-wrap: wrap;
     justify-content: center;
     max-width: 100%;
-    background: #F7F7F7;
     border-radius: 25px;
-    margin-left: 100px;
-    margin-right: 100px;
 }
 
 .ks-appartment-item {
-    flex-basis: 25%;
+    width: 25%;
     height: 250px;
-    margin: 50px;
+    margin: 30px;
     display: flex;
     text-align: flex-start;
     align-items: flex-end;
     font-family: Montserrat, sans-serif;
-    font-weight: 500;
-    line-height: 25.67px;
-    font-size: 15px;
+    font-weight: 900;
+    font-size: 12px;
     color: white;
-    background: linear-gradient(180deg, #FF6060 0%, #9a3838 80%);
     box-shadow: 3px 4px 6px 5px #0000002e;
+    text-decoration: none;
     border-radius: 10px;
+}
+
+.ks-card {
+    background: linear-gradient(180deg, #FF6060 0%, #9a3838 80%);
+    border-radius: 10px;
+}
+
+.card-title {
+    padding: 10px 0px 10px 10px;
 }
 
 .appartment_cover {
     width: 100%;
-    height: 230px;
+    height: 220px;
     object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
