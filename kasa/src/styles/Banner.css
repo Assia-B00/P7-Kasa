@@ -33,3 +33,10 @@
 .nav-list :hover {
     text-decoration: underline;
 }
+
+@media (max-width : 768px) {
+    .ks-banner {
+        max-width: 768px;
+    }
+
+}

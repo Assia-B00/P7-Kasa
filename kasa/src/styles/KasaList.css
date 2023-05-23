@@ -23,6 +23,7 @@
     height: 250px;
     margin: 30px;
     display: flex;
+    flex-wrap: wrap;
     text-align: flex-start;
     align-items: flex-end;
     font-family: Montserrat, sans-serif;
@@ -50,3 +51,5 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+
+@media (max-width: 768px) {}

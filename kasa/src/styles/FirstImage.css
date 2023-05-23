@@ -1,5 +1,5 @@
 .ks-first_image-container {
-    width: 1240px;
+    width: 90%;
     height: 223px;
     border-radius: 10px;
     box-shadow: 3px 4px 6px 5px #0000002e;
@@ -29,11 +29,11 @@
 }
 
 .ks-img_apropos-container {
-    width: 1240px;
+    width: 90%;
     height: 223px;
+    margin: auto;
     border-radius: 10px;
     box-shadow: 3px 4px 6px 5px #0000002e;
-    margin: auto;
     margin-bottom: 30px;
     background-color: black;
 }
@@ -44,4 +44,12 @@
     object-fit: cover;
     border-radius: 10px;
     opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .ks-first_image-h1 {
+        text-align: start;
+        font-size: 40px;
+        margin-left: 5%;
+    }
 }
