@@ -2,10 +2,15 @@
     color: black;
     text-align: left;
     padding: 32px;
-    width: 1240px;
+    max-width: 90%;
     display: flex;
     justify-content: space-between;
     margin: auto;
+}
+
+.ks-banner img {
+    flex-basis : auto;
+    height: 68px;
 }
 
 .nav {
@@ -39,4 +44,11 @@
         max-width: 768px;
     }
 
+    .ks-banner img {
+        flex-basis: auto;
+    }
+
+    .nav {
+        font-size: 10px;
+    }
 }

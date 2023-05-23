@@ -2,12 +2,15 @@
     margin: auto;
     position: relative;
     height: 415px;
-    width: 1240px;
+    width: 90%;
     margin-top: 30px;
     }
 
 .carousel p {
     position: relative;
+    text-align: center;
+    top: -70%;
+    bottom: 69.04%;
     font-size: 18px;
     font-weight: 500;
     color: white;
@@ -65,7 +68,10 @@
         height: 30px;
         left: calc(100% - 20px)
     }
-    .carousel p { 
-        top: 70% 
+    .div-compteur { 
+        position: relative;
+        text-align: center;
+        top: -50%;
+        bottom: 69.04%;
     }
 }
