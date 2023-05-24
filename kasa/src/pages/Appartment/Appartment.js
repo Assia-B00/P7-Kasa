@@ -4,15 +4,14 @@ import apartments from "../../datas/data.json"
 import { useParams } from 'react-router-dom'
 import Collapse from '../../components/Collapse'
 import "../../styles/Appartment.css"
-
-
-const arrayStars = [1, 2, 3, 4, 5]
+import Rating from '../../components/Rating'
 
 function Appartment() {
 
   const params = useParams()
 
   const apartmentDetail = apartments.filter(function (apartment) {
+
 
     return apartment.id === params.id;
   })
@@ -43,12 +42,7 @@ function Appartment() {
                         <img className='host_img' src={host.picture} />
                       </div>
                       <div className='stars'>
-                        {
-                          arrayStars.map(element => {
-                            const nbreEtoiles = parseInt(rating)
-                            return (<span key={"star-" + element} className={element <= nbreEtoiles ? 'span1' : 'span2'}>★</span>)
-                          })
-                        }
+                        <Rating rating={rating} />
                       </div>
                     </div>
                   </div>

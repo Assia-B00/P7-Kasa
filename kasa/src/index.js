@@ -13,11 +13,11 @@ ReactDOM.render(
     <Router>
       <Banner />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/A_propos" element={<A_propos />} />
-        <Route path="/Appartment/:id" element={<Appartment />} />
+        <Route path="/" element={<Home />} errorElement={<Error_page />} />
+        <Route path="/A_propos" element={<A_propos />} errorElement={<Error_page />} />
+        <Route path="/Appartment/:id" element={<Appartment />} errorElement={<Error_page />}/>
         <Route path="/Error_page" element={<Error_page />} />
-        <Route path="*" element={<Error_page />}  /> 
+        <Route path="*" element={<Error_page />} errorElement={<Error_page />} />
       </Routes>
     </Router>
   </React.StrictMode>,
