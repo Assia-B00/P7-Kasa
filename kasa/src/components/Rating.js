@@ -8,7 +8,7 @@ const Rating = ({ rating }) => {
 
     return (
         <div className="rating">
-            {/* Loop to display star by rating */}
+            {/* Boucle pour afficher l'étoile */}
             {arrayStars.map((star) =>
                 rating >= star ? (
                     <img
