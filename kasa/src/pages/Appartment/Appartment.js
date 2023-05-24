@@ -5,17 +5,20 @@ import { useParams } from 'react-router-dom'
 import Collapse from '../../components/Collapse'
 import "../../styles/Appartment.css"
 import Rating from '../../components/Rating'
+import Error_page from '../Error_page/Error_page'
 
 function Appartment() {
 
   const params = useParams()
 
   const apartmentDetail = apartments.filter(function (apartment) {
-
-
     return apartment.id === params.id;
   })
-  console.log(apartmentDetail)
+
+  if (apartmentDetail.length == 0) {
+    return (<Error_page />)
+  }
+
   return (
     <div>
       <main className='about_main'>
