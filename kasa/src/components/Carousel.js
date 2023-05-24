@@ -32,7 +32,7 @@ function Carousel({pictures}) { //reçois un tableau avec les URL des images
                 </div>
             )}
             {totalPictures > 0 && (
-                // compteur d'images qui ne s'affiche qu'en version Desktop et lorsqu'il y a plusieurs images
+                // compteur d'images qui s'affiche
                 <div className='div-compteur'> 
                     <p className='compteurImages'>
                         {index+1}/{totalPictures+1}
